@@ -1,0 +1,125 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Updated color tokens for elegant admin panel */
+  --background: #f1f5f9; /* Light gray for main background */
+  --foreground: #1f2937; /* Dark gray for main text */
+  --card: #ffffff; /* White for card backgrounds */
+  --card-foreground: #6b7280; /* Medium gray for card text */
+  --popover: #ffffff; /* White for popover backgrounds */
+  --popover-foreground: #1f2937; /* Dark gray for popover text */
+  --primary: #1f2937; /* Primary color for buttons and headers */
+  --primary-foreground: #ffffff; /* White text on primary buttons */
+  --secondary: #6b7280; /* Medium gray for secondary elements */
+  --secondary-foreground: #ffffff; /* White text on secondary buttons */
+  --muted: #f1f5f9; /* Light gray for muted text */
+  --muted-foreground: #6b7280; /* Medium gray for muted text */
+  --accent: #8b5cf6; /* Purple for accents and highlights */
+  --accent-foreground: #ffffff; /* White text on accent elements */
+  --destructive: #ea580c; /* Orange for error messages */
+  --destructive-foreground: #ffffff; /* White text on destructive buttons */
+  --border: #d1d5db; /* Light gray for borders */
+  --input: #ffffff; /* White for input fields */
+  --ring: rgba(139, 92, 246, 0.5); /* Soft purple for focus rings */
+  --chart-1: #6366f1; /* Light purple for chart elements */
+  --chart-2: #f97316; /* Orange for chart elements */
+  --chart-3: #34d399; /* Green for chart elements */
+  --chart-4: #fbbf24; /* Yellow for chart elements */
+  --chart-5: #3b82f6; /* Blue for chart elements */
+  --radius: 0.5rem; /* Rounded corners for cards and buttons */
+  --sidebar: #f1f5f9; /* Light gray for sidebar background */
+  --sidebar-foreground: #1f2937; /* Dark gray for sidebar text */
+  --sidebar-primary: #ffffff; /* White for primary sidebar elements */
+  --sidebar-primary-foreground: #1f2937; /* Dark gray for primary sidebar text */
+  --sidebar-accent: #8b5cf6; /* Purple for sidebar highlights */
+  --sidebar-accent-foreground: #ffffff; /* White text on sidebar accents */
+  --sidebar-border: #d1d5db; /* Light gray for sidebar borders */
+  --sidebar-ring: rgba(139, 92, 246, 0.5); /* Soft purple for sidebar focus rings */
+}
+
+.dark {
+  /* Dark mode colors for sophisticated premium feel */
+  --background: #0f172a;
+  --foreground: #f1f5f9;
+  --card: #1e293b;
+  --card-foreground: #f1f5f9;
+  --popover: #1e293b;
+  --popover-foreground: #f1f5f9;
+  --primary: #8b5cf6;
+  --primary-foreground: #ffffff;
+  --secondary: #475569;
+  --secondary-foreground: #f1f5f9;
+  --muted: #334155;
+  --muted-foreground: #94a3b8;
+  --accent: #8b5cf6;
+  --accent-foreground: #ffffff;
+  --destructive: #ea580c;
+  --destructive-foreground: #ffffff;
+  --border: #334155;
+  --input: #1e293b;
+  --ring: rgba(139, 92, 246, 0.5);
+  --chart-1: #6366f1;
+  --chart-2: #f97316;
+  --chart-3: #34d399;
+  --chart-4: #fbbf24;
+  --chart-5: #3b82f6;
+  --sidebar: #1e293b;
+  --sidebar-foreground: #f1f5f9;
+  --sidebar-primary: #8b5cf6;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #475569;
+  --sidebar-accent-foreground: #f1f5f9;
+  --sidebar-border: #334155;
+  --sidebar-ring: rgba(139, 92, 246, 0.5);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
